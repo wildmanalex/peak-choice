@@ -25,22 +25,12 @@ var myRouter = new VueRouter({
 								this.clicked = !this.clicked;
 								this.isOpen = !this.isOpen
 							},
-<<<<<<< HEAD
 							login : function() {
 								$.post('/login', this.loginForm, (dataFromServer) => {
 									if(dataFromServer.success) {
 										console.log(this.$router)
 										this.$router.push({ path: `/search` })
 									}
-=======
-							register : function() {
-								console.log(this.registerForm.password)
-								// we don't actually refer to the event object inside of this function, so there's no need to name the event object
-								$.post('/register', this.registerForm, function(dataFromServer){
->>>>>>> parent of a5b88f0... fixed register
-									console.log(dataFromServer)
-								})
-							},
 							register : function() {
 								// console.log(this.registerForm.password)
 								$.post('/register', this.registerForm, (dataFromServer) => {
