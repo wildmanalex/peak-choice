@@ -23,7 +23,7 @@ var skiAreaSchema = new mongoose.Schema({
 // let skiAreaModel = mongoose.model('SkiArea', skiArea);
 
 var skiArea = mongoose.model('skiArea', skiAreaSchema);
-console.log(skiAreaSchema)
+// console.log(skiAreaSchema)
 
 var breck = new skiArea({
 	   "name" : "Breckenridge",
