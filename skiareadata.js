@@ -9,7 +9,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
   // we're connected!
 
 
-let skiAreaSchema = new mongoose.Schema({
+var skiAreaSchema = new mongoose.Schema({
 	name: { type: String, required: true },
 	lat: Number,
 	lng: Number,
