@@ -1,0 +1,80 @@
+<div class='skiAreaReport'>
+	<nav class="navigation">
+		<!-- <a href="#" class="navbar-logo">peak choice</a> -->
+		<router-link to="/search" class="navbar-logo">peak choice</router-link>
+		<div class="navbar-right">
+			<!-- <router-link to="/register" class="navbar-right">log out</router-link> -->
+			<router-link to="/search" class="navbar-right">search</router-link>
+
+		</div>
+	</nav>
+	<div class="headerVid">
+		<div class='video'>
+			<!-- <iframe src="https://www.youtube.com/embed/-o0Xan34cT4?ecver=2"></iframe> -->
+			<video autoplay loop muted>
+				<!-- <source src="http://demosthenes.info/assets/videos/polina.webm" type="video/webm"> -->
+				<source src="ski.m4v" type="video/mp4">
+				<!-- <source src="https://www.youtube.com/watch?v=-o0Xan34cT4" type="video/mp4"> -->
+			</video>
+		</div>
+	</div>
+	<div class="container-fluid report">
+		<h1 class='reportTitle'>{{$route.params.location}}</h1>
+		<!-- <h1 class='reportTitle'>{{this.nameForReport}}</h1> -->
+		<div class='space'></div>
+		<div class='row'>
+			<div class='forcast col-sm-12 col-md-6 col-lg-6'>
+				<h3>forecast</h3>
+				<p>day - summary - low - high</p>
+					<div class="firstForecast">
+						<h4>{{this.firstDay.day}}</h4> <p>| {{this.firstDay.icon}} | {{this.firstDay.lowTemp}}&#x2109  {{this.firstDay.highTemp}}&#x2109</p>
+					</div>
+					<div class="firstForecast">
+						<h4>{{this.secondDay.day}}</h4> <p>| {{this.secondDay.icon}} | {{this.secondDay.lowTemp}}&#x2109  {{this.secondDay.highTemp}}&#x2109</p>
+					</div>
+					<div class="firstForecast">
+						<h4>{{this.thirdDay.day}}</h4> <p>| {{this.thirdDay.icon}} | {{this.thirdDay.lowTemp}}&#x2109  {{this.thirdDay.highTemp}}&#x2109</p>
+					</div>
+					<div class="firstForecast">
+						<h4>{{this.fourthDay.day}}</h4> <p>| {{this.fourthDay.icon}} | {{this.fourthDay.lowTemp}}&#x2109  {{this.fourthDay.highTemp}}&#x2109</p>
+					</div>
+					<div class="firstForecast">
+						<h4>{{this.fifthDay.day}}</h4> <p>| {{this.fifthDay.icon}} | {{this.fifthDay.lowTemp}}&#x2109  {{this.fifthDay.highTemp}}&#x2109</p>
+					</div>
+			</div>
+			<div class='snow col-sm-12 col-md-6 col-lg-6'>
+				<h3>snowfall</h3>
+				<div class="snowfallNum">
+					<h4>{{this.snowfall}}</h4>
+				</div>
+				<div class="snowfallWords">
+					<p>centimeters of snow <br/>is predicted to fall <br/>in the next 24 hours</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="fsData col-sm-12 col-md-6 col-lg-6">
+				<h3>popularity</h3>
+				<div class="fsNum">
+					<h4>{{this.fourSquareVisits}}</h4>
+				</div>
+				<div class="fsWords">
+					<p>foursquare users <br/>have been to <br/>this ski area</p>
+				</div>
+			</div>
+			<div class="liftdata col-sm-12 col-md-6 col-lg-6">
+				<h3>lift status</h3>
+				<!-- <p>{{this.lifts}}</p> -->
+				<div class='liftsOpen'>
+					<h4>{{this.liftsOpen}}</h4>
+					<p>open</p>
+				</div>
+				<div class='liftsClosed'>
+					<h4>{{this.liftsClosed}}</h4>
+					<p>closed</p>
+				</div>
+			</div>
+		</div>
+		<button v-on:click='saveArea' class='saveArea'>save this ski area</button>
+	</div>
+</div>

@@ -1,0 +1,33 @@
+.areaContainer {
+  border:1px solid black;
+  height:30rem;
+  width:25rem;
+  display:flex;
+  justify-content:center;
+}
+.forcastSnow {
+  display:flex;
+  flex-direction: row;
+  align-content:stretch;
+}
+.forcast {
+  width:50%;
+}
+.snow {
+  width: 50%;
+}
+.fbLiftData {
+  display:flex;
+  flex-direction: row;
+  align-content:stretch;
+}
+.facebook {
+  width:50%;
+  margin-top: 5rem;
+}
+.liftdata {
+	margin-top: 5rem;
+}
+.snow {
+  width:50%;
+}

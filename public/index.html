@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="https://unpkg.com/vue"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/3.0.1/vue-router.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!-- <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script> -->
+	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css"> -->
+	 <script src="https://use.fontawesome.com/8f5e0c9388.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+	<link rel='stylesheet' type="text/css" href="main.css">
+
+</head>
+<body>
+	<div id="app">
+		<!-- <nav class="navbar navbar-expand-lg">
+			<a class="navbar-brand" href="#">peak choice</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+					</li>
+				</ul>
+			</div>
+		</nav> -->
+
+		<!-- <div class="header"> -->
+
+			<!-- <img src="https://static.pexels.com/photos/416714/pexels-photo-416714.jpeg" class="img-fluid" alt="Responsive image"> -->
+
+		<!-- </div> -->
+		<!-- <div class="space">
+		</div> -->
+		<!-- <center>
+			{{userinput}}
+   			<input id="locationTextField" type="text" size="50" onfocus="this.value=''" v-model='userinput'>
+
+			<button type="button" class="btn btn-primary" v-on:click="request" >Get Current Weather</button>
+			<p>
+
+			</p> -->
+		<!-- </center> -->
+
+		<!-- <button v-on:click="request">data</button> -->
+		<!-- <div class="row">
+		  <div class="col">
+			  <div>
+				  Current Temperature
+			  </div>
+			  {{temp}}
+		  </div>
+		  <div class="col">
+			  <div>
+				Precipitation Probability
+			  </div>
+			  {{precip}}
+		  </div>
+		  <div class="col">
+			  <div>
+				Visibility
+			  </div>
+			  {{visi}}
+		  </div>
+		  <div class="col">
+			  <div>
+				Wind Speed
+			  </div>
+			  {{snow}}
+		  </div>
+		</div> -->
+
+
+		<!-- <div class="btn-group">
+  			<button class="btn btn-secondary btn-lg" type="button">
+    			Large button
+  			</button>
+  			<button type="button" class="btn btn-lg btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    			<span class="sr-only">Toggle Dropdown</span>
+  			</button>
+  			<div class="dropdown-menu">
+				<a class="dropdown-item" href="#" ><router-link to="/skiArea/breck" v-on:click="request">breck</router-link></a>
+				<a>Arapahoe Basin</a>
+				<a>Steamboat Spring</a>
+				<a>Keystone</a>
+				<a>Winter Park</a>
+				<a>Aspen Highlands</a>
+				<a>Aspen Mountain</a>
+				<a>Eldora</a>
+				<a>Loveland</a>
+				<a>Snowmass</a>
+				<a>Copper Mountain</a>
+				<a>Beaver Creek</a>
+				<a>Monarch</a>
+				<a>Crested Butte</a>
+				<a>Vail</a>
+				<a>Howelsen Hill</a>
+				<a>Wolf Creek</a>
+				<a>Purgatory</a>
+				<a>Telluride</a>
+
+  			</div>
+		</div> -->
+		<!-- <select class="selectpicker" data-size="5" title="Choose a Ski Area">
+			<option value=""><a class="dropdown-item" href="#" ><router-link to="/skiArea/breck" v-on:click="request">Breckenridge</router-link></a></option>
+			<option>Arapahoe Basin</option>
+			<option>Steamboat Spring</option>
+			<option>Keystone</option>
+			<option>Winter Park</option>
+			<option>Aspen Highlands</option>
+			<option>Aspen Mountain</option>
+			<option>Eldora</option>
+			<option>Loveland</option>
+			<option>Snowmass</option>
+			<option>Copper Mountain</option>
+			<option>Beaver Creek</option>
+			<option>Monarch</option>
+			<option>Crested Butte</option>
+			<option>Vail</option>
+			<option>Howelsen Hill</option>
+			<option>Wolf Creek</option>
+			<option>Purgatory</option>
+			<option>Telluride</option>
+		</select> -->
+		<!-- <a><router-link to='/search'>dsadsadas</router-link></a> -->
+		<!-- <a><router-link to="/">Register</router-link></a> -->
+		<router-view></router-view>
+
+	</div>
+
+        <!-- <script>
+            function init() {
+                var input = document.getElementById('locationTextField');
+                var autocomplete = new google.maps.places.Autocomplete(input);
+            }
+            google.maps.event.addDomListener(window, 'load', init);
+        </script> -->
+	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<script src="main.js"></script>
+</body>
+</html>
+
+<!-- temp, precipitation proba, visibility, wind speed -->

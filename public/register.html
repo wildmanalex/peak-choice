@@ -1,0 +1,53 @@
+<div class="registerComponent">
+	<div class="title-box">
+		<h1 class='title'>peak choice</h1>
+	</div>
+	<div class="container-fluid box">
+
+		<div class="loginBox">
+				<!-- <div class="register">
+				<h2>Register</h2>
+				<form v-on:submit="register">
+					<input placeholder="username" v-model="registerForm.username">
+					<input placeholder="password" type="password" v-model="registerForm.password">
+					<input type="submit">
+				</form>
+				<h2>Log In</h2>
+				<form v-on:submit.prevent="login">
+					<input placeholder="username" v-model="loginForm.username">
+					<input placeholder="password" type="password" v-model="loginForm.password">
+					<input type="submit">
+				</form>
+			</div> -->
+			<div class="login">
+				<div class="wrapper">
+			  		<form class="form-signin" v-on:submit.prevent="login">
+						<h2 class="form-signin-heading">login</h2>
+						<input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" v-model="loginForm.username">
+						<input type="password" class="form-control password testcolor" name="password" placeholder="Password" required="" v-model="loginForm.password">
+						<label class="checkbox">
+						</label>
+						<button class="loginbtn" type="submit">log in <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</button>
+			  		</form>
+				</div>
+			</div>
+		<!-- {{{{{{{Register}}}}}}} -->
+			<div class="register">
+				<button v-on:click="toggle()" class='registerbtn'>register here</button>
+				<div v-if="clicked">
+					<div class="wrapper">
+						<form class="form-signin" v-on:submit.prevent='register'>
+							<h2 class="form-signin-heading">Register</h2>
+							<input type="text" class="form-control" name="username" placeholder="Username" required="" autofocus="" v-model="registerForm.username">
+							<input type="password" class="form-control password" name="password" placeholder="Password" required="" v-model="registerForm.password">
+							<label class="checkbox">
+							</label>
+							<button class="loginbtn" type="submit">register <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

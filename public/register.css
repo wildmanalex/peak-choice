@@ -1,0 +1,37 @@
+.registerComponent {
+	width: 100vw;
+	text-align: center;
+	/*background-color: #A5D6FC;*/
+	background-image: url('login-img.jpeg');
+	/* Full height */
+	height: 100vh;
+	/* Create the parallax scrolling effect */
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+.container-fluid {
+	display: inline-flex;
+	flex-direction: column;
+	position: absolute;
+	top:2rem;
+	left:0;
+	right:0;
+	height: 55vh;
+	width: 30vw;
+	background-color: black;
+	background: rgba(0,0,0,0.7);
+}
+.login {
+	order: 1;
+	flex-grow: 1;
+}
+.register {
+	order:2;
+	flex-grow: 3;
+}
+h2 {
+	color: white;
+}
