@@ -30,7 +30,9 @@ var myRouter = new VueRouter({
 									if(dataFromServer.success) {
 										console.log(this.$router)
 										this.$router.push({ path: `/search` })
-									},
+									}
+								})
+							},
 							register : function() {
 								// console.log(this.registerForm.password)
 								$.post('/register', this.registerForm, (dataFromServer) => {
