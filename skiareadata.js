@@ -8,7 +8,7 @@ db.on('error', console.error.bind(console, 'connection error:'));
 // db.once('open', function() {
   // we're connected!
   db.once("open", function(callback) {
-     console.log(callback);
+     console.log();
  });
 
 
@@ -19,11 +19,11 @@ var skiAreaSchema = new mongoose.Schema({
 	fourSquareID:{ type: String, required:true},
 	liftieName: { type: String, required: false},
 });
-
+console.log(skiAreaSchema)
 // let skiAreaModel = mongoose.model('SkiArea', skiArea);
 
 var skiArea = mongoose.model('skiArea', skiAreaSchema);
-// console.log(skiAreaSchema)
+console.log(skiArea)
 
 var breck = new skiArea({
 	   "name" : "Breckenridge",
