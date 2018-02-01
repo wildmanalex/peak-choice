@@ -1,9 +1,9 @@
 // var mongoose = require('mongoose')
 
 //connect to mongoose
-mongoose.connect('mongodb://localhost:27017/peakchoice')
+// mongoose.connect('mongodb://localhost:27017/peakchoice')
 
-var db = mongoose.connection;
+// var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 // db.once('open', function() {
   // we're connected!
@@ -12,18 +12,18 @@ db.on('error', console.error.bind(console, 'connection error:'));
  });
 
 
-var skiAreaSchema = new mongoose.Schema({
-	name: { type: String, required: true },
-	lat: Number,
-	lng: Number,
-	fourSquareID:{ type: String, required:true},
-	liftieName: { type: String, required: false},
-});
-console.log(skiAreaSchema)
+// var skiAreaSchema = new mongoose.Schema({
+// 	name: { type: String, required: true },
+// 	lat: Number,
+// 	lng: Number,
+// 	fourSquareID:{ type: String, required:true},
+// 	liftieName: { type: String, required: false},
+// });
+// console.log(skiAreaSchema)
 // let skiAreaModel = mongoose.model('SkiArea', skiArea);
 
-var skiArea = mongoose.model('skiArea', skiAreaSchema);
-console.log(skiArea)
+// var skiArea = mongoose.model('skiArea', skiAreaSchema);
+// console.log(skiArea)
 
 var breck = new skiArea({
 	   "name" : "Breckenridge",
