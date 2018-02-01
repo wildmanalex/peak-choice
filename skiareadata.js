@@ -1,4 +1,4 @@
-var mongoose = require('mongoose')
+// var mongoose = require('mongoose')
 
 //connect to mongoose
 mongoose.connect('mongodb://localhost:27017/peakchoice')
@@ -274,6 +274,5 @@ howelsen.save(function (err, howelsen){
 	console.log(breck)
 })
 
-console.log('the end')
 
 db.close();
