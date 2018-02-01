@@ -4,12 +4,12 @@
 // mongoose.connect('mongodb://localhost:27017/peakchoice')
 
 // var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
+// db.on('error', console.error.bind(console, 'connection error:'));
 // db.once('open', function() {
   // we're connected!
-  db.once("open", function(callback) {
-     console.log();
- });
+ //  db.once("open", function(callback) {
+ //     console.log();
+ // });
 
 
 // var skiAreaSchema = new mongoose.Schema({
