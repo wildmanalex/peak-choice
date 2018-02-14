@@ -1,1 +1,126 @@
+.searchComponent {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.headerVid {
+    position: relative;
+    overflow: hidden;
+    width:100vw;
+	height: auto;
+    text-align:center;
+}
+.div {
+    position:absolute;
+    height:100%;
+    width:200%;
+    left:-50%;
+}
 
+video {
+	margin-top: -24rem;
+	width: 100%;
+
+}
+@media only screen and (min-width: 1600px) {
+    video {
+        margin-top: -32rem;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    video {
+        margin-top: -15rem;
+    }
+}
+@media only screen and (max-width: 700px) {
+    video {
+        margin-top: -6rem;
+    }
+}
+.displayedSaved {
+	color: #9DCAEB;
+}
+.selectArea {
+	display: inline-flex;
+}
+.selectArea h1{
+	color: #9DCAEB;
+}
+.selectArea i {
+	color: #9DCAEB;
+}
+.btn-group {
+	width: auto;
+}
+.btn-primary {
+	background: none;
+	border: none;
+	color: #9DCAEB;
+	font-size: 2rem;
+}
+.btn-primary:hover {
+	background: none;
+	color: #9DCAEB;
+
+}
+.dropdown-toggle:hover {
+	transform: scale(2);
+	transition: all 280ms ease-in;
+}
+.dropdown-toggle:active {
+	color: #9DCAEB;
+	border: none;
+	background-color: white;
+}
+.btn-primary:not([disabled]):not(.disabled).active, .btn-primary:not([disabled]):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+	color: #9DCAEB;
+	background-color: white;
+	border: none;
+	box-shadow: none;
+}
+.dropdown-menu {
+	width: 40vw;
+	height: 15vh;
+	position: absolute;
+	left:0;
+}
+.areaGrid {
+	width: 100vw;
+	flex-direction: column;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.row {
+	text-align: center;
+}
+.router {
+	font-size: 1.5rem;
+	color: white;
+}
+.router:hover {
+	text-decoration: none;
+	color: #4e7fa0;
+}
+.altA {
+	background-color: #A5C9E8;
+}
+.altB {
+	background-color: #80b8e5;
+}
+/*@media only screen and (min-width: 600px) {
+    .router {
+        color:#9DCAEB;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .altA {
+        background-color: white;
+    }
+}
+@media only screen and (min-width: 600px) {
+    .altB {
+        background-color: white;
+    }
+}*/

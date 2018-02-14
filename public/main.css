@@ -6,6 +6,9 @@
 .space {
 	height: 2rem;
 }
+.space2 {
+	height:1.5rem;
+}
 											/******  Nav *******/
 
 /*.navbar {
@@ -34,7 +37,7 @@
 }
 
 .navbar-right a:hover{
-  text-decoration:underline;
+  color: #9DCAEB;
 }
 .navbar-logo{
   padding-left:10%;
@@ -46,6 +49,7 @@
 }
 .navbar-logo:hover {
 	color: #9DCAEB;
+	text-decoration: none;
 }
 											/*******  Register Component ********/
 .registerComponent {
@@ -160,7 +164,7 @@
 	background-size: cover;
 }*/
 										/******* Search Component *****/
-.searchComponent {
+/*.searchComponent {
 	display: inline-flex;
 	justify-content: center;
 	align-items: center;
@@ -170,24 +174,10 @@
     position: relative;
     overflow: hidden;
     width:100vw;
-    height:45vh;
-    max-height:100vh;
+	height: auto;
     text-align:center;
 }
-@media only screen and (min-width: 1600px) {
-    /* For mobile phones: */
-    .headerVid {
-		/*display: none;*/
-        height: 55vh;
-    }
-}
-@media only screen and (max-width: 700px) {
-    /* For mobile phones: */
-    .headerVid {
-		/*display: none;*/
-        height: 45vh;
-    }
-}
+
 .div {
     position:absolute;
     height:100%;
@@ -198,31 +188,19 @@
 video {
 	margin-top: -24rem;
 	width: 100%;
-	/*width: 100%;
-  	height: 100%;
-  	object-fit: cover;*/
-    /*height:auto;
-    min-height:100%;
-    min-width:50%;*/
 }
 @media only screen and (min-width: 1600px) {
-    /* For mobile phones: */
     video {
-		/*display: none;*/
         margin-top: -32rem;
     }
 }
 @media only screen and (max-width: 1000px) {
-    /* For mobile phones: */
     video {
-		/*display: none;*/
         margin-top: -15rem;
     }
 }
 @media only screen and (max-width: 700px) {
-    /* For mobile phones: */
     video {
-		/*display: none;*/
         margin-top: -8rem;
     }
 }
@@ -296,7 +274,7 @@ h7 {
 }
 .router:hover {
 	text-decoration: none;
-}
+}*/
 											/******* End Search Component *****/
 
 											/****** Report Component ******/
@@ -307,11 +285,10 @@ h7 {
   display:flex;
   justify-content:center;
 }*/
-
+/*
 .report {
 	width: 70vw;
 	height: 50vh;
-	/*border: 2px dotted #9DCAEB;*/
 	text-align: center;
 }
 .reportTitle {
@@ -329,7 +306,7 @@ h7 {
 .firstForecast h4{
 	display: inline-block;
 	font-size: 1.2rem;
-	color: #9DCAEB;
+	color: white;
 }
 .firstForecast p{
 	display: inline-block;
@@ -337,10 +314,7 @@ h7 {
 .firstForecast .temp {
 	display: inline-block;
 }
-/*.firstForecast .temp p {
-	display: inline-block;
-}*/
-/*Snowfall*/
+
 .snow h3{
 	margin-bottom: 2rem;
 }
@@ -377,18 +351,18 @@ h7 {
 .liftdata {
 	margin-top: 3rem;
 }
-.liftsOpen h4{
+#liftsOpen h4{
 	color: #48C170;
 	display: inline-block;
 }
-.liftsOpen p{
+#liftsOpen p{
 	display: inline-block;
 }
-.liftsClosed h4 {
+#liftsClosed h4 {
 	color: #FF4041;
 	display: inline-block;
 }
-.liftsClosed p {
+#liftsClosed p {
 	display: inline-block;
 }
 .saveArea {
@@ -408,7 +382,60 @@ h7 {
 }
 .saveArea:active {
 	text-shadow: 2px 2px #ff0000;
+}*/
+
+
+/*.skiReportContainer {
+	position: absolute;
+	margin: auto;
+	left:0;
+	right:0;
+	display: grid;
+	width: 80vw;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows:1fr 1fr;
+}*/
+/*@media only screen and (max-width: 1000px) {
+    .skiReportContainer {
+		position: absolute;
+		margin: auto;
+		left:0;
+		right:0;
+		display: grid;
+		width: 60vw;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows:1fr 1fr;
+    }*/
+/*.skiReportContainer h2 {
+	color:white;
+	text-align: center;
+}
+.forecastX {
+  grid-column-start:1;
+  grid-column-end:2;
+  grid-row-start:1;
+  height: auto;
+  background-color: #A5C9E8;
+  text-align: center;
+}
+.snowX {
+	text-align: center;
+  background-color: #80b8e5;
+  grid-column-start:2;
+  grid-row-start:1;
 
 }
+.liftsX {
+  text-align: center;
+  background-color: #4a8ebf;
+  grid-column-start:2;
+  grid-row-start:2;
+}
+.popX {
+  background-color: #4e7fa0;
+  grid-column-start:1;
+  grid-row-start:2;
+  text-align: center;
+}*/
 
 											/****** End Report Component ******/

@@ -1,38 +1,21 @@
 <div class="container-fluid searchComponent">
-	<!-- <div id="headerContent">
-    <p> Hello </p>
-    <video poster="http://eyday.net/Titas%20Communications%20/Assets/Bakgrund.png" autoplay="true" loop>
-        <source src="breck.mov" type="video/mp4">
-    </video>
-    </div> -->
 <nav class="navigation">
-	<router-link to="/search" class="navbar-logo">peak choice</router-link>
+	<router-link to="/" class="navbar-logo">peak choice</router-link>
 	<div class="navbar-right">
-		<!-- <router-link to="/register" class="navbar-right">log out</router-link> -->
-		<router-link to="/search" class="navbar-right">search</router-link>
+		<router-link to="/" class="navbar-right">search</router-link>
 	</div>
 </nav>
 <div class="headerVid">
 	<div class='video'>
-		<!-- <iframe src="https://www.youtube.com/embed/-o0Xan34cT4?ecver=2"></iframe> -->
 		<video autoplay loop muted>
-			<!-- <source src="http://demosthenes.info/assets/videos/polina.webm" type="video/webm"> -->
 			<source src="ski.m4v" type="video/mp4">
-			<!-- <source src="https://www.youtube.com/watch?v=-o0Xan34cT4" type="video/mp4"> -->
 		</video>
 	</div>
 </div>
-<span>your saved ski areas</span>
 
-<p>
-	<!-- <router-link class="router" v-bind:to="/skiArea/userSavedAreas" >{{this.userSavedAreas}}</router-link> -->
-	<!-- {{this.userSavedAreas}} -->
+<!-- <p>
 	<router-link v-for="link in this.userSavedAreas" v-bind:to="'/skiArea/'+link" :key='link' class='displayedSaved'>{{link}}</router-link>
-</p>
-<div class='space'></div>
-	<!-- <div class="header">
-		 <img src="https://static.pexels.com/photos/416714/pexels-photo-416714.jpeg" class="img-fluid"> -->
-		<!-- <img src="https://static.pexels.com/photos/531636/pexels-photo-531636.jpeg" class="img-fluid"> -->
+</p> -->
 		<div class="selectArea">
 			<h1>select a ski area</h1>
 			<i class="fa fa-snowflake-o fa-lg" aria-hidden="true"></i>
@@ -41,74 +24,75 @@
 
 		<div class="container areaGrid-center">
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link class="router" to="/skiArea/aspen-mountain">Aspen</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/aspen-highlands" class="router">Aspen Highlands</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link to="/skiArea/abasin" class="router">Arapahoe Basin</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/beavercreek" class="router">Beaver Creek</router-link>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-3">
-				<router-link to="/skiArea/breck" class="router">Breck</router-link>
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
+				<router-link to="/skiArea/breck" class="router">Breckenridge</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/copper" class="router">Copper Mountain</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link to="/skiArea/crested-butte" class="router">Crested Butte</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/eldora" class="router">Eldora</router-link>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link to="/skiArea/keystone" class="router">Keystone</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/howelsen" class="router">Howelsen Hill</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link to="/skiArea/loveland" class="router">Loveland</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/monarch" class="router">Monarch</router-link>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link to="/skiArea/purgatory" class="router">Purgatory</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/snowmass" class="router">Snowmass</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link to="/skiArea/steamboat" class="router">Steamboat Springs</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/telluride" class="router">Telluride</router-link>
 			</div>
 		</div>
 		<div class="row">
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link to="/skiArea/vail" class="router">Vail</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 				<router-link to="/skiArea/winter-park" class="router">Winter Park</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altA">
 				<router-link to="/skiArea/wolfcreek" class="router">Wolf Creek</router-link>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-sm-12 col-md-6 col-lg-3 altB">
 			</div>
 		</div>
 		</div>
 	</div>
+	<router-link to='/epic'>Have an epic pass?</router-link>
 </div>

@@ -54,78 +54,76 @@ var User = mongoose.model('User', UserSchema)
 app.use(express.static('./public'))
 app.use(express.static('./'))
 
-var checkIfLoggedIn = function(req, res, next){
-    if ( req.session._id ) {
-        console.log("user is logged in. proceeding to next route handler")
-        next()
-    }
-    else {
-        res.redirect('/register')
-    }
-}
+// var checkIfLoggedIn = function(req, res, next){
+//     if ( req.session._id ) {
+//         console.log("user is logged in. proceeding to next route handler")
+//         next()
+//     }
+//     else {
+//         res.redirect('/register')
+//     }
+// }
 
 app.get('/', function(req, res){
 	res.sendFile('./public/index.html', {root:'./'})
 })
-app.get('/register', function(req, res){
-    res.sendFile('./public/register.html', {root: './'})
-})
+// app.get('/register', function(req, res){
+//     res.sendFile('./public/register.html', {root: './'})
+// })
 //-----Register logic------//
-app.post('/register', function(req, res){
-
-    var newUser = new User(req.body)
-    bcrypt.genSalt(11, function(saltErr, salt) {
-        if (saltErr) { console.log(saltErr)}
-        console.log('salt? ', salt)
-        bcrypt.hash(newUser.password, salt, function(hashErr, hashedPassword){
-            if (hashErr) { console.log(hashErr) }
-            newUser.password = hashedPassword
-            newUser.save(function(err){
-                if (err) { console.log('failed to save user')}
-                else {
-                    req.session._id = newUser._id
-                    res.send({success:'success'})
-                }
-            })
-        })
-    })
-})
-
-
-//------ Login Logic -------//
-app.post('/login', function(req, res){
-    User.findOne({username: req.body.username}, function(err, user){
-        if ( err ) {
-            console.log('failed to find user')
-            res.send({failure:'failure'})
-        }
-        else if ( !user ) {
-            res.send({failure:'failure'})
-        }
-        // this person is trying to log in as a user who DOES exist in our database,
-        // but do the passwords match?
-        else {
-            bcrypt.compare(req.body.password, user.password, function(bcryptErr, matched){
-                if (bcryptErr) {
-                    console.log(bcryptErr)
-                    res.send({failure:'failure'})
-                }
-                else if ( !matched ) {
-                    console.log('passwords dont match')
-                    res.send({failure:'failure'})
-                }
-                else if ( matched ) {
-                    req.session._id = user._id
-                    res.send({success:'success'})
-                }
-            })
-        }
-
-    })
-})
-app.get('/search', checkIfLoggedIn, function(req, res){
-    res.sendFile('./public/search.html', {root:'./'})
-})
+// app.post('/register', function(req, res){
+//
+//     var newUser = new User(req.body)
+//     bcrypt.genSalt(11, function(saltErr, salt) {
+//         if (saltErr) { console.log(saltErr)}
+//         console.log('salt? ', salt)
+//         bcrypt.hash(newUser.password, salt, function(hashErr, hashedPassword){
+//             if (hashErr) { console.log(hashErr) }
+//             newUser.password = hashedPassword
+//             newUser.save(function(err){
+//                 if (err) { console.log('failed to save user')}
+//                 else {
+//                     req.session._id = newUser._id
+//                     res.send({success:'success'})
+//                 }
+//             })
+//         })
+//     })
+// })
+//
+//
+// //------ Login Logic -------//
+// app.post('/login', function(req, res){
+//     User.findOne({username: req.body.username}, function(err, user){
+//         if ( err ) {
+//             console.log('failed to find user')
+//             res.send({failure:'failure'})
+//         }
+//         else if ( !user ) {
+//             res.send({failure:'failure'})
+//         }
+//         else {
+//             bcrypt.compare(req.body.password, user.password, function(bcryptErr, matched){
+//                 if (bcryptErr) {
+//                     console.log(bcryptErr)
+//                     res.send({failure:'failure'})
+//                 }
+//                 else if ( !matched ) {
+//                     console.log('passwords dont match')
+//                     res.send({failure:'failure'})
+//                 }
+//                 else if ( matched ) {
+//                     req.session._id = user._id
+//                     res.send({success:'success'})
+//                 }
+//             })
+//         }
+//
+//     })
+// })
+// app.get('/search', checkIfLoggedIn, function(req, res){
+//     res.sendFile('./public/search.html', {root:'./'})
+// })
 
 
 //This is where the ski area is defined
@@ -270,31 +268,31 @@ app.get('/getdata', function(req, res){
 		})
 	})
 })
-app.post('/saveArea', function(req, res){
-	// console.log(req.body)
-	let saveArea = req.body;
-	// console.log(req.session._id)
-	User.findOneAndUpdate(
-		{_id:req.session._id},
-		{$push: {savedAreas: req.body}},
-		function(err, data){
-			if(err){
-				console.log(err)
-			}
-			// console.log(data);
-		});
-})
-app.get('/getSavedAreas', function(req, res) {
-	User.find({_id:req.session._id}, function(err, user){
-		if(err){
-			console.log(err)
-		}
-		console.log(user)
-		res.send(user)
-	})
-})
+// app.post('/saveArea', function(req, res){
+// 	// console.log(req.body)
+// 	let saveArea = req.body;
+// 	// console.log(req.session._id)
+// 	User.findOneAndUpdate(
+// 		{_id:req.session._id},
+// 		{$push: {savedAreas: req.body}},
+// 		function(err, data){
+// 			if(err){
+// 				console.log(err)
+// 			}
+// 			// console.log(data);
+// 		});
+// })
+// app.get('/getSavedAreas', function(req, res) {
+// 	User.find({_id:req.session._id}, function(err, user){
+// 		if(err){
+// 			console.log(err)
+// 		}
+// 		console.log(user)
+// 		res.send(user)
+// 	})
+// })
 
 
-app.listen(80, function(){
-    console.log('server listening on port 8083')
+app.listen(8082, function(){
+    console.log('server listening on port 8082')
 })
