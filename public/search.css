@@ -96,7 +96,7 @@ video {
 	text-align: center;
 }
 .router {
-	font-size: 1.5rem;
+	font-size: 8vw;
 	color: white;
 }
 .router:hover {
@@ -109,18 +109,9 @@ video {
 .altB {
 	background-color: #80b8e5;
 }
-/*@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 900px) {
     .router {
-        color:#9DCAEB;
+		font-size: 2.2vw;
+		color: white;
     }
 }
-@media only screen and (min-width: 600px) {
-    .altA {
-        background-color: white;
-    }
-}
-@media only screen and (min-width: 600px) {
-    .altB {
-        background-color: white;
-    }
-}*/
