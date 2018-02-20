@@ -201,13 +201,16 @@ var myRouter = new VueRouter({
 											this.liftsOpen = document.getElementById('liftsClosedId').innerHTML = ''
 										}
 										else if(fullData.liftieName === 'boreal'){
-											this.lifts = "Lift data is unavailable for this ski area at the time";
+											this.liftsOpen = document.getElementById('liftsOpen').innerHTML = '<p>Lift information is unavailable for this mountain</p>'
+											this.liftsOpen = document.getElementById('liftsClosedId').innerHTML = ''
 										}
 										else if(fullData.liftieName === 'brighton'){
-											this.lifts = "Lift data is unavailable for this ski area at the time";
+											this.liftsOpen = document.getElementById('liftsOpen').innerHTML = '<p>Lift information is unavailable for this mountain</p>'
+											this.liftsOpen = document.getElementById('liftsClosedId').innerHTML = ''
 										}
 										else if(fullData.liftieName === 'cannon'){
-											this.lifts = "Lift data is unavailable for this ski area at the time";
+											this.liftsOpen = document.getElementById('liftsOpen').innerHTML = '<p>Lift information is unavailable for this mountain</p>'
+											this.liftsOpen = document.getElementById('liftsClosedId').innerHTML = ''
 										}
 										else {
 										// this.lifts = "There are " + fullData.lifts.open + " lifts open and  " + fullData.lifts.closed +" closed";
