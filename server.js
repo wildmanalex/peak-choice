@@ -293,6 +293,6 @@ app.get('/getdata', function(req, res){
 // })
 
 
-app.listen(8082, function(){
+app.listen(80, function(){
     console.log('server listening on port 8082')
 })
