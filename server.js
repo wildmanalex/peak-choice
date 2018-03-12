@@ -268,6 +268,68 @@ app.get('/getdata', function(req, res){
 		})
 	})
 })
+app.get('/epicpassdata', function(req, res){
+	var epicdata = {
+		vaildarksky:null,
+		vailliftie:null,
+		breckdarksky:null,
+		breckliftie:null,
+		keystonedarksky:null,
+		keystoneliftie:null,
+		abasindarksky:null,
+		abasinliftie:null,
+	}
+
+
+	var vaildarksky = `https://api.darksky.net/forecast/${secrets.dks}/39.6403,106.3742`;
+	var breckdarksky = `https://api.darksky.net/forecast/${secrets.dks}/39.4817,106.0384`;
+	var keystonedarksky = `https://api.darksky.net/forecast/${secrets.dks}/39.5792,105.9347`;
+	var abasindarksky = `https://api.darksky.net/forecast/${secrets.dks}/39.6423,105.8717`;
+	var vailliftie = `https://liftie.info/api/resort/vail`;
+	var breckliftie = `https://liftie.info/api/resort/breck`;
+	var keystoneliftie = `https://liftie.info/api/resort/keystone`;
+	var abasinliftie = `https://liftie.info/api/resort/abasin`;
+	var vailfoursquare = `https://api.foursquare.com/v2/venues/4b3bfeecf964a520018025e3?client_id=J0XJEGV1NLXEYXVMHGYUDFRKIPQP2SR4YYQPDJMTNMCLCSFH&client_secret=${secrets.fsq}&v=20171205`
+	var breckfoursquare = `https://api.foursquare.com/v2/venues/49da5cd2f964a5207b5e1fe3?client_id=J0XJEGV1NLXEYXVMHGYUDFRKIPQP2SR4YYQPDJMTNMCLCSFH&client_secret=${secrets.fsq}&v=20171205`
+	var keystonefoursquare = `https://api.foursquare.com/v2/venues/4ac764c5f964a52003b720e3?client_id=J0XJEGV1NLXEYXVMHGYUDFRKIPQP2SR4YYQPDJMTNMCLCSFH&client_secret=${secrets.fsq}&v=20171205`
+	var abasinfoursquare = `https://api.foursquare.com/v2/venues/4acf609ef964a5204cd320e3?client_id=J0XJEGV1NLXEYXVMHGYUDFRKIPQP2SR4YYQPDJMTNMCLCSFH&client_secret=${secrets.fsq}&v=20171205`
+	request(vaildarksky, function(err, response, vaildarkskydata){
+		// console.log(vaildarkskydata)
+		epicdata.vaildarksky = vaildarkskydata
+
+		request(breckdarksky, function(err, response, breckdarkskydata){
+			// console.log(breckdarkskydata)
+			epicdata.breckdarksky = breckdarkskydata
+
+			request(keystonedarksky, function(err, response, keystonedarkskydata){
+				// console.log(keystonedarkskydata)
+				epicdata.keystonedarksky = keystonedarkskydata
+
+				request(abasindarksky, function(err, response, abasindarkskydata){
+					// console.log(abasindarkskydata)
+					epicdata.abasindarksky = abasindarkskydata
+					request(vailliftie, function(err, response, vailliftiedata){
+						// console.log(abasindarkskydata)
+						epicdata.vailliftie = vailliftiedata
+						request(breckliftie, function(err, response, breckliftiedata){
+							// console.log(abasindarkskydata)
+							epicdata.breckliftie = breckliftiedata
+							request(keystoneliftie, function(err, response, keystoneliftiedata){
+								// console.log(abasindarkskydata)
+								epicdata.keystoneliftie = keystoneliftiedata
+								request(abasinliftie, function(err, response, abasinliftiedata){
+									// console.log(abasindarkskydata)
+									epicdata.abasinliftie = abasinliftiedata
+									res.send(epicdata)
+								})
+							})
+						})
+					})
+				})
+			})
+		})
+	})
+})
 // app.post('/saveArea', function(req, res){
 // 	// console.log(req.body)
 // 	let saveArea = req.body;
@@ -293,6 +355,6 @@ app.get('/getdata', function(req, res){
 // })
 
 
-app.listen(80, function(){
+app.listen(8080, function(){
     console.log('server listening on port 8082')
 })
